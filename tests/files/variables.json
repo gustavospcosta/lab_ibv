@@ -1,0 +1,220 @@
+{
+    "AGGREGATED_FOLDER_NAME": "aggregated.data",
+    "API_URL": "https://api.openbrewerydb.org/v1/breweries",
+    "AWS_CONN_ID": "aws_default",
+    "CLEANDATA_FOLDER_NAME": "clean.data",
+    "DF_DATATYPE_SCHEMA": {
+        "address_1": "string",
+        "address_2": "string",
+        "address_3": "string",
+        "brewery_type": "string",
+        "city": "string",
+        "country": "string",
+        "id": "string",
+        "latitude": "float64",
+        "longitude": "float64",
+        "name": "string",
+        "phone": "string",
+        "postal_code": "string",
+        "state": "string",
+        "state_province": "string",
+        "street": "string",
+        "website_url": "string"
+    },
+    "EMAIL_LIST": [
+        "gustavo490@gmail.com"
+    ],
+    "EMAIL_TEMPLATE_LIST": [
+        {
+            "assunto_email": "DAG {{ dag_id }} iniciada",
+            "corpo_email": "<h3>DAG {{ dag_id }} foi INICIADA</h3><p><strong>Data de Execu\u00e7\u00e3o:</strong> {{ exec_str }}</p>",
+            "tipo_evento": "inicio_dag"
+        },
+        {
+            "assunto_email": "DAG {{ dag_id }} finalizada com sucesso",
+            "corpo_email": "<h3>DAG {{ dag_id }} foi FINALIZADA COM SUCESSO.</h3><p><strong>Data de Execu\u00e7\u00e3o:</strong> {{ exec_str }}</p>",
+            "tipo_evento": "fim_dag_sucesso"
+        },
+        {
+            "assunto_email": "DAG {{ dag_id }} finalizada com erro",
+            "corpo_email": "<h3>DAG {{ dag_id }} foi FINALIZADA COM ERRO.</h3><p><strong>Data de Execu\u00e7\u00e3o:</strong> {{ exec_str }}</p>",
+            "tipo_evento": "fim_dag_erro"
+        },
+        {
+            "assunto_email": "Task {{ task_id }} da DAG {{ dag_id }} executada com sucesso",
+            "corpo_email": "<h3>DAG: {{ dag_id }}</h3><p><strong>Tarefa:</strong> {{ task_id }}</p><p><strong>Status:</strong> Sucesso</p><p><strong>Data de Execu\u00e7\u00e3o:</strong> {{ exec_str }}</p>",
+            "tipo_evento": "task_sucesso"
+        },
+        {
+            "assunto_email": "Task {{ task_id }} da DAG {{ dag_id }} executada com falha",
+            "corpo_email": "<h3>DAG: {{ dag_id }}</h3><p><strong>Tarefa:</strong> {{ task_id }}</p><p><strong>Status:</strong> Falha</p><p><strong>Data de Execu\u00e7\u00e3o:</strong> {{ exec_str }}</p>",
+            "tipo_evento": "task_falha"
+        }
+    ],
+    "ERRORS_DICT": {
+        "ERROR_API_TIMEOUT": "Timeout na chamada da API.",
+        "ERROR_CHECK_FILE_CONTENT": "Conteudo do arquivo nao e uma lista",
+        "ERROR_CONEXAO": "Erro de conexao.",
+        "ERROR_EMAIL_LIST": "Lista de enderecos de email invalida.",
+        "ERROR_EMAIL_TEMPLATE": "Erro no template do email.",
+        "ERROR_EMPTY_FILE": "O arquivo esta vazio.",
+        "ERROR_FILE_NOTFOUND": "Arquivo nao encontrado no Bucket.",
+        "ERROR_FOLDER_MISSING": "Pasta nao encontrada.",
+        "ERROR_INESPERADO": "Erro inesperado:",
+        "ERROR_INVALIDAPI_RESPONSE": "Resposta da API nao e uma lista.",
+        "ERROR_MAINBUCKET_MISSING": "Bucket principal nao encontrado.",
+        "ERROR_PROJECTFOLDER_MISSING": "Pasta principal do projeto nao encontrada.",
+        "ERROR_SAVING_FILE": "Erro ao salvar arquivo.",
+        "ERROR_TIMESTAMP_FILENAME": "Nome do arquivo nao contem um timestamp valido.",
+        "ERROR_VALIDATION_FAIL": "Falha na validacao.",
+        "ERROR_VARIAVEL_NOTFOUND": "Variavel do Airflow nao encontrada.",
+        "ERROR_XCOM_INFO": "Dados nao encontrados nos XCOM."
+    },
+    "JSON_FIELDS_LIST": [
+        "id",
+        "name",
+        "brewery_type",
+        "address_1",
+        "address_2",
+        "address_3",
+        "city",
+        "state_province",
+        "postal_code",
+        "country",
+        "longitude",
+        "latitude",
+        "phone",
+        "website_url",
+        "state",
+        "street"
+    ],
+    "JSON_OBJECT_SCHEMA": {
+        "properties": {
+            "address_1": {
+                "type": [
+                    "string",
+                    "null"
+                ]
+            },
+            "address_2": {
+                "type": [
+                    "string",
+                    "null"
+                ]
+            },
+            "address_3": {
+                "type": [
+                    "string",
+                    "null"
+                ]
+            },
+            "brewery_type": {
+                "type": [
+                    "string",
+                    "null"
+                ]
+            },
+            "city": {
+                "type": [
+                    "string",
+                    "null"
+                ]
+            },
+            "country": {
+                "type": [
+                    "string",
+                    "null"
+                ]
+            },
+            "id": {
+                "type": [
+                    "string",
+                    "null"
+                ]
+            },
+            "latitude": {
+                "type": [
+                    "number",
+                    "null"
+                ]
+            },
+            "longitude": {
+                "type": [
+                    "number",
+                    "null"
+                ]
+            },
+            "name": {
+                "type": [
+                    "string",
+                    "null"
+                ]
+            },
+            "phone": {
+                "type": [
+                    "string",
+                    "null"
+                ]
+            },
+            "postal_code": {
+                "type": [
+                    "string",
+                    "null"
+                ]
+            },
+            "state": {
+                "type": [
+                    "string",
+                    "null"
+                ]
+            },
+            "state_province": {
+                "type": [
+                    "string",
+                    "null"
+                ]
+            },
+            "street": {
+                "type": [
+                    "string",
+                    "null"
+                ]
+            },
+            "website_url": {
+                "type": [
+                    "string",
+                    "null"
+                ]
+            }
+        },
+        "required": [
+            "id",
+            "name",
+            "brewery_type",
+            "address_1",
+            "address_2",
+            "address_3",
+            "city",
+            "state_province",
+            "postal_code",
+            "country",
+            "longitude",
+            "latitude",
+            "phone",
+            "website_url",
+            "state",
+            "street"
+        ],
+        "type": "object"
+    },
+    "MAIN_BUCKET_NAME": "bucket.warehouse",
+    "PROCESSED_FOLDER_NAME": "processed.data",
+    "PROJECT_FOLDER_LIST": [
+        "aggregated.data",
+        "raw.data",
+        "processed.data",
+        "clean.data"
+    ],
+    "PROJECT_FOLDER_NAME": "breweries.project",
+    "RAWDATA_FOLDER_NAME": "raw.data"
+}
