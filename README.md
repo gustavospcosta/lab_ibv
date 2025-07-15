@@ -329,7 +329,7 @@ Para importar:
 
 ## Considerações Finais
 
-O projeto INBEV oferece um pipeline robusto com validações em todas as etapas, garantindo a qualidade dos dados. A integração com o Airflow permite automação e monitoramento, enquanto os testes unitários asseguram a confiabilidade do código. Para depuração, consulte os logs no Airflow Web UI ou execute os testes unitários.
+O projeto oferece um pipeline robusto com validações em todas as etapas, garantindo a qualidade dos dados. A integração com o Airflow permite automação e monitoramento, enquanto os testes unitários asseguram a confiabilidade do código. Para depuração, consulte os logs no Airflow Web UI ou execute os testes unitários.
 
 Se houver problemas, verifique:
 - Conexão AWS no Airflow
