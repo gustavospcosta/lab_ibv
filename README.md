@@ -1,6 +1,6 @@
 # Projeto INBEV
 
-Este repositório foi criado para o desafio técnico da INBEV. O projeto consiste em uma DAG (Directed Acyclic Graph) do Apache Airflow que processa dados de cervejarias obtidos por meio da API Open Brewery DB e os salva em arquivos Parquet no serviço S3 da AWS. A DAG suporta dois modos de execução: **agendada** (a cada 30 minutos) e **manual** (com base em um arquivo JSON fornecido pelo usuário).
+Este repositório foi criado para um desafio técnico. O projeto consiste em uma DAG (Directed Acyclic Graph) do Apache Airflow que processa dados de cervejarias obtidos por meio da API Open Brewery DB e os salva em arquivos Parquet no serviço S3 da AWS. A DAG suporta dois modos de execução: **agendada** (a cada 30 minutos) e **manual** (com base em um arquivo JSON fornecido pelo usuário).
 
 ---
 
